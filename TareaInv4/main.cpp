@@ -14,6 +14,7 @@ int main()
      clavesecreta.set_binario();
      clavesecreta.set_llave();
 
+     // Me pareció bonito ponerle colores:D
      cout << "\nCadena original: "
           << "\e[0;93m" << clavesecreta.get_cadena() << NC;
      cout << "\nBinario: "

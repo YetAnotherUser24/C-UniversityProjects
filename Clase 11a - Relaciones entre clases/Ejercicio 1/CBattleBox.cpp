@@ -99,8 +99,25 @@ TipoEntero CBattleBox::getAncho()
 
 void CBattleBox::pelear()
 {
-    for (auto &robot : m_Robots)
+    // Falta codigo
+    // falta llamar varias veces hasta que quede solo uno
+    while (m_Robots.size() >= 2)
     {
-        robot->pelear(m_Robots);
+        for (auto &robot : m_Robots)
+        {
+            robot->pelear(m_Robots);
+        }
+        // eliminar un robot si tiene menos de 0 vidas
+        for (auto &robot : m_Robots)
+        {
+            if (robot->getVidas() <= 0)
+            {
+                removerRobot(robot->getNombre());
+            }
+        }
+        actualizarBattleBox();
+        dibujarBattleBox(cout);
     }
+    actualizarBattleBox();
+    dibujarBattleBox(cout);
 }

@@ -27,14 +27,15 @@ public:
     TipoEntero m_PosX;
     TipoEntero m_PosY;
     void setNombre(TipoString pNombre);
-    void setVidas(TipoEntero pVidas);
     TipoString getNombre();
     TipoEntero getPosX();
     TipoEntero getPosY();
     TipoCaracter getColor();
-    TipoEntero getVidas();
+    void setVidas(TipoEntero vidas) { m_Vidas = vidas; }
+    TipoEntero getVidas() { return m_Vidas; }
     TipoString mostrarPosicion();
-    void pelear(vector<CRobot *> &);
+    void pelear(vector<CRobot *> &vecRobots);
+    void golpear(CRobot &enemigo);
 };
 
 #endif // AGREGACION_ROBOT_H

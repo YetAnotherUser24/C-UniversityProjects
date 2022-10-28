@@ -8,6 +8,7 @@
 #include <iostream>
 #include <vector>
 #include "Tipos.h"
+#include "CCoordenada.h"
 
 using namespace std;
 
@@ -17,6 +18,7 @@ private:
     TipoString m_Nombre;
     TipoCaracter m_Color;
     TipoEntero m_Vidas;
+    CCoordenada m_Coordenada;
     void moverse(TipoEntero pPosX, TipoEntero pPosY);
 
 public:

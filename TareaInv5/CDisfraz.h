@@ -5,12 +5,12 @@ using namespace std;
 class CDisfraz
 {
 private:
-    string tipo = "";
-    double precio = 0;
-    int cantidad = 0;
+    string tipo;
+    double precio;
+    int cantidad;
 
 public:
-    CDisfraz() {}
+    CDisfraz() { tipo = "", precio = 0, cantidad = 0; }
     CDisfraz(string, double, int);
 
     virtual ~CDisfraz() {}

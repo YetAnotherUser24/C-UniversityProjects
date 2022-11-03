@@ -1,7 +1,7 @@
 #include <iostream>
 #include "CStock.h"
 
-CStock::CStock(const vector<CDisfraz> *vec)
+CStock::CStock(vector<CDisfraz> *vec)
 {
     stock = vec;
 }

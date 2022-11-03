@@ -1,6 +1,8 @@
 #include <iostream>
 #include "CDisfraz.h"
 
+using namespace std;
+
 CDisfraz::CDisfraz(string _tipo, double _precio, int _cantidad)
 {
     tipo = _tipo;

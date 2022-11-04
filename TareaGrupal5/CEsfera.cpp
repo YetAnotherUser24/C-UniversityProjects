@@ -1,13 +1,15 @@
 #include "CEsfera.h"
 
-CEsfera::CEsfera(double _x, double _y, double _z, double _r)
+CEsfera::CEsfera(double _x, double _y, double _z, double _r) : CFiguraGeometrica(_x, _y, _z), radio(_r) {}
+
+void CEsfera::set_radio(double _r)
 {
-    x = _x;
-    y = _y;
-    z = _z;
     radio = _r;
 }
-
+double CEsfera::get_radio()
+{
+    return radio;
+}
 double CEsfera::volumen()
 {
     return (4 / 3 * pow(radio, 3) * M_PI);

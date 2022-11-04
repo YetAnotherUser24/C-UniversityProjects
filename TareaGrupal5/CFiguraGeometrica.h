@@ -1,3 +1,6 @@
+#ifndef CFiguraGeometricaH
+#define CFiguraGeometricaH
+
 #include <cstdlib>
 #include "time.h"
 #include <cmath>
@@ -14,10 +17,12 @@ public:
     CFiguraGeometrica(double, double, double);
     virtual ~CFiguraGeometrica() {}
 
-    virtual double volumen() = 0;
-    virtual double distancia() = 0;
+    virtual double get_x();
+    virtual double get_y();
+    virtual double get_z();
 
-    double get_x();
-    double get_y();
-    double get_z();
+    virtual double volumen() = 0;
+    virtual double distancia(CFiguraGeometrica *) = 0;
 };
+
+#endif

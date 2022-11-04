@@ -2,10 +2,9 @@
 
 CFiguraGeometrica::CFiguraGeometrica()
 {
-    srand(time(NULL));
-    x = (rand() % 1001) / 100;
-    y = (rand() % 1001) / 100;
-    z = (rand() % 1001) / 100;
+    x = (rand() % 1001) / 100.0;
+    y = (rand() % 1001) / 100.0;
+    z = (rand() % 1001) / 100.0;
 }
 CFiguraGeometrica::CFiguraGeometrica(double _x, double _y, double _z)
 {

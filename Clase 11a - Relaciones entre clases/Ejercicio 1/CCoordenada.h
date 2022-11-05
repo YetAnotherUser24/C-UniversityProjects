@@ -7,10 +7,17 @@ private:
     TipoEntero m_PosY;
 
 public:
-    CCoordenada();
-    virtual ~CCoordenada();
+    CCoordenada() {}
+    virtual ~CCoordenada() {}
 
-    CCoordenada(TipoEntero pPosX, TipoEntero pPosY);
-    TipoEntero getPosX();
-    TipoEntero getPosY();
+    CCoordenada(TipoEntero pPosX, TipoEntero pPosY)
+    {
+        m_PosX = pPosX;
+        m_PosY = pPosY;
+    }
+    TipoEntero get_PosX();
+    TipoEntero get_PosY();
+    void setPosX(TipoEntero);
+    void setPosY(TipoEntero);
+    void setPos(TipoEntero, TipoEntero);
 };

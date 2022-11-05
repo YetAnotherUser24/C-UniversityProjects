@@ -118,7 +118,7 @@ void Menu::seleccionarOpcion()
         dibujarMapa();
         break;
     case Opciones::Pelear:
-        pelear();
+        m_BattleBox.pelear();
         break;
     }
 }

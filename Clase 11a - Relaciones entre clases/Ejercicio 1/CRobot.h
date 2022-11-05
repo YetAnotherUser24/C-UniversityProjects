@@ -26,8 +26,6 @@ public:
     CRobot(TipoString pNombre, TipoCaracter pColor,
            TipoEntero pPosX, TipoEntero pPosY);
     virtual ~CRobot();
-    TipoEntero m_PosX;
-    TipoEntero m_PosY;
     void setNombre(TipoString pNombre);
     TipoString getNombre();
     TipoEntero getPosX();

@@ -1,5 +1,5 @@
-#ifndef __CALUMNO_H__
-#define __CALUMNO_H__
+#ifndef __CALUMNO1_H__
+#define __CALUMNO1_H__
 
 #include <iostream>
 
@@ -31,4 +31,4 @@ public:
 
     bool esMayorDe(CAlumno *);
 };
-#endif // __CALUMNO_H__
+#endif // __CALUMNO_H1__

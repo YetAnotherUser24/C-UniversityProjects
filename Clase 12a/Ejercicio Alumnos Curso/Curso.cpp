@@ -21,22 +21,12 @@ void Curso::delete_alumno(string _codigo)
     }
 }
 
-void vector_printer(vector<double> &vec)
-{
-    cout << "[";
-    for (auto &element : vec)
-    {
-        cout << setw(5) << element;
-    }
-    cout << "  ]";
-}
-
 int Curso::aprobados()
 {
-    int aprov;
+    int aprov = 0;
     for (auto e : Alumnos)
     {
-        aprov += e->get_status();
+        aprov += int(e->get_status());
     }
 
     return aprov;
@@ -108,27 +98,12 @@ double Curso::estadistic_mediana()
     return mediana;
 }
 
-vector<double> Curso::estadistic_desviacion_respecto_media()
-{
-    int N = Alumnos.size();
-    vector<double> desviacionR(N);
-    double media;
-    media = estadistic_media();
-
-    for (int i = 0; i < N; i++)
-    {
-        desviacionR[i] = abs(Alumnos[i]->get_nota_final() - media);
-    }
-
-    return desviacionR;
-}
-
 double Curso::estadistic_desviacion_media()
 {
     int N = Alumnos.size();
     double media;
     media = estadistic_media();
-    double desviacionM;
+    double desviacionM = 0;
 
     for (auto e : Alumnos)
     {
@@ -144,7 +119,7 @@ double Curso::estadistic_varianza()
 {
     double media;
     media = estadistic_media();
-    double varianza;
+    double varianza = 0;
     int N = Alumnos.size();
 
     for (auto e : Alumnos)
@@ -161,7 +136,7 @@ double Curso::estadistic_desviacion_std()
 {
     double media;
     media = estadistic_media();
-    double desviacionS;
+    double desviacionS = 0;
     int N = Alumnos.size();
 
     for (auto e : Alumnos)
@@ -199,9 +174,6 @@ void Curso::print_estadistics()
     cout << "\nNota media: " << estadistic_media();
     cout << "\nNota común: " << estadistic_moda();
     cout << "\nNota mediana: " << estadistic_mediana();
-    cout << "\nDesviacion de nota sobre la media: ";
-    vector<double> d = estadistic_desviacion_respecto_media();
-    vector_printer(d);
     cout << "\nDesviacion de la nota media: " << estadistic_desviacion_media();
     cout << "\nVarianza de la nota: " << estadistic_varianza();
     cout << "\nDesviacion estándar de la nota: " << estadistic_desviacion_std();

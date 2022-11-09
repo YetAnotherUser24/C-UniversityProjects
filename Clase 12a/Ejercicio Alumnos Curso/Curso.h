@@ -25,12 +25,10 @@ public:
     void delete_alumno(string _codigo);
     int aprobados();
     int desaprobados();
-    void vector_printer(vector<double> &vec);
 
     double estadistic_media();
     double estadistic_moda();
     double estadistic_mediana();
-    vector<double> estadistic_desviacion_respecto_media();
     double estadistic_desviacion_media();
     double estadistic_varianza();
     double estadistic_desviacion_std();

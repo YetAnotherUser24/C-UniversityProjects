@@ -1,3 +1,6 @@
+#ifndef __A_PREGRADO_H__
+#define __A_PREGRADO_H__
+
 #include "Alumno.h"
 
 class A_Pregrado : public Alumno
@@ -9,18 +12,23 @@ private:
     double Proyecto;
 
 public:
-    double pC1() const;
-    void setPC1(double pC1);
+    A_Pregrado(string _nombre, string _codigo, double _pc1, double _pc2, double _pc3, double _proyecto) : Alumno(_nombre, _codigo),
+                                                                                                          PC1(_pc1), PC2(_pc2), PC3(_pc3), Proyecto(_proyecto) {}
+    ~A_Pregrado() {}
 
-    double pC2() const;
-    void setPC2(double pC2);
+    double get_pc1();
+    void set_pc1(double pC1);
 
-    double pC3() const;
-    void setPC3(double pC3);
+    double get_pc2();
+    void set_pc2(double pC2);
 
-    double proyecto() const;
-    void setProyecto(double proyecto);
+    double get_pc3();
+    void set_pc3(double pC3);
 
-    double nota_final() override;
-    bool aprobado() override;
+    double get_proyecto();
+    void set_proyecto(double proyecto);
+
+    void nota_final() override;
+    void aprobado() override;
 };
+#endif // __A_PREGRADO_H__

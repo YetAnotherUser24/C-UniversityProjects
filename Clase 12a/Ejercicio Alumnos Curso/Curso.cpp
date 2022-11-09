@@ -21,6 +21,16 @@ void Curso::delete_alumno(string _codigo)
     }
 }
 
+void vector_printer(vector<double> &vec)
+{
+    cout << "[";
+    for (auto &element : vec)
+    {
+        cout << setw(5) << element;
+    }
+    cout << "  ]";
+}
+
 int Curso::aprobados()
 {
     int aprov;
@@ -173,7 +183,26 @@ double Curso::aprobados_promedio()
     {
         media = media + int(e->get_status());
     }
-    media = media / N;
+    media = media / N * 100;
 
     return media;
+}
+
+void Curso::print_estadistics()
+{
+    cout << "\n\nESTADISTICAS DEL CURSO";
+    cout << "\n-------------------------------------";
+    cout << "\nN° de alumnos: " << Alumnos.size();
+    cout << "\nN° de alumnos aprobados: " << aprobados();
+    cout << "\nN° de alumnos desaprobados: " << desaprobados();
+    cout << "\nPromedio de alumnos aprobados: " << aprobados_promedio() << '%';
+    cout << "\nNota media: " << estadistic_media();
+    cout << "\nNota común: " << estadistic_moda();
+    cout << "\nNota mediana: " << estadistic_mediana();
+    cout << "\nDesviacion de nota sobre la media: ";
+    vector<double> d = estadistic_desviacion_respecto_media();
+    vector_printer(d);
+    cout << "\nDesviacion de la nota media: " << estadistic_desviacion_media();
+    cout << "\nVarianza de la nota: " << estadistic_varianza();
+    cout << "\nDesviacion estándar de la nota: " << estadistic_desviacion_std();
 }

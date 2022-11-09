@@ -25,6 +25,7 @@ public:
     void delete_alumno(string _codigo);
     int aprobados();
     int desaprobados();
+    void vector_printer(vector<double> &vec);
 
     double estadistic_media();
     double estadistic_moda();
@@ -34,5 +35,7 @@ public:
     double estadistic_varianza();
     double estadistic_desviacion_std();
     double aprobados_promedio();
+
+    void print_estadistics();
 };
 #endif // __CURSO_H__

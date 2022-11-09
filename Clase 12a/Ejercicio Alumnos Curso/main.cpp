@@ -3,8 +3,6 @@
 #include "A_Pregrado.h"
 #include <iomanip>
 
-void vector_printer();
-
 int main()
 {
     auto Progra = new Curso();
@@ -25,16 +23,6 @@ int main()
     Progra->add_alumno(Yoshua);
     Progra->add_alumno(Ashly);
 
-    cout << Progra->estadistic_media();
+    Progra->print_estadistics();
     return 0;
-}
-
-void vector_printer(vector<double> &vec)
-{
-    cout << "[";
-    for (auto &element : vec)
-    {
-        cout << setw(5) << element;
-    }
-    cout << "  ]";
 }

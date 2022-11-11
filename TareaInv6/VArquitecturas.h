@@ -79,7 +79,7 @@ public:
             if (e->getStatus() == true)
             {
                 cout << "\n"
-                     << e->get_nombre() << ": " << e->getT_executiontotal(instrucciones) / 1000.0 << " ms";
+                     << e->get_nombre() << ": " << e->getT_executiontotal(instrucciones) * difficulty / 1000.0 << " ms";
 
                 secuencia = secuencia + e->get_nombre() + "  ";
             }

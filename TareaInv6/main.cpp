@@ -33,6 +33,7 @@ int main()
     Arquitecturas->setStatus("x86", false);
     Arquitecturas->setStatus("SPARC", false);
     Arquitecturas->setDifficultyPerInstruc(3);
+    Arquitecturas->setNumeroInstrucciones(3000);
     Arquitecturas->printData();
     return 0;
 }

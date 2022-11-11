@@ -17,16 +17,19 @@ int main()
     auto Arquitecturas = new VArquitecturas(arcs);
 
     // Primer calculo
+    cout << ">PRIMER CALCULO";
     Arquitecturas->setStatus("SPARC", false);
     Arquitecturas->setNumeroInstrucciones(2000);
     Arquitecturas->printData();
 
     // Segundo calculo
+    cout << "\n\n\n>SEGUNDO CALCULO";
     Arquitecturas->setStatus("SPARC", true);
     Arquitecturas->setNumeroInstrucciones(4000);
     Arquitecturas->printData();
 
     // Tercer calculo
+    cout << "\n\n\n>TERCER CALCULO";
     Arquitecturas->setStatus("x86", false);
     Arquitecturas->setStatus("SPARC", false);
     Arquitecturas->setDifficultyPerInstruc(3);

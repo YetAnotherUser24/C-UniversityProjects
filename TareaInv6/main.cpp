@@ -1,3 +1,5 @@
+#ifndef __MAIN_H__
+#define __MAIN_H__
 
 #include "VArquitecturas.h"
 #include "SPARC.h"
@@ -35,5 +37,9 @@ int main()
     Arquitecturas->setDifficultyPerInstruc(3);
     Arquitecturas->setNumeroInstrucciones(3000);
     Arquitecturas->printData();
+
+    delete Arquitecturas;
+    Arquitecturas = nullptr;
     return 0;
 }
+#endif // __MAIN_H__

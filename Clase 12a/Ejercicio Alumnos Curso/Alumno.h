@@ -18,6 +18,7 @@ public:
 
     virtual void nota_final() = 0;
     virtual void aprobado() = 0;
+    virtual string get_grado() = 0;
 
     double get_nota_final() { return NF; }
     bool get_status() { return status; }

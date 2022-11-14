@@ -30,5 +30,6 @@ public:
 
     void nota_final() override;
     void aprobado() override;
+    string get_grado() override;
 };
 #endif // __A_PREGRADO_H__

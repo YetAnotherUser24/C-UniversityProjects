@@ -127,7 +127,7 @@ double Curso::estadistic_varianza()
         varianza = varianza + pow(abs(e->get_nota_final()), 2);
     }
 
-    varianza = varianza / N;
+    varianza = varianza / N * 1.0;
 
     return varianza;
 }
@@ -158,23 +158,49 @@ double Curso::aprobados_promedio()
     {
         media = media + int(e->get_status());
     }
-    media = media / N * 100;
+    media = media * 1.0 / N * 100.0;
 
     return media;
 }
 
+void Curso::notas_finales()
+{
+    for (auto e : Alumnos)
+    {
+        e->nota_final();
+        e->aprobado();
+    }
+}
 void Curso::print_estadistics()
 {
-    cout << "\n\nESTADISTICAS DEL CURSO";
+    cout << "\n\nALUMNOS";
+    cout << "\n-------------------------------------";
+    for (auto e : Alumnos)
+    {
+        cout << "\nAlumno: " << e->get_nombre();
+        cout << "\nCodigo: " << e->get_codigo();
+        cout << "\nNota Final: " << e->get_nota_final();
+        cout << "\nGrado: " << e->get_grado();
+        cout << "\nAprobado: ";
+        if (e->get_status() == true)
+        {
+            cout << "Sí\n";
+        }
+        else
+        {
+            cout << "No\n";
+        }
+    }
+    cout << "\nESTADISTICAS DEL CURSO";
     cout << "\n-------------------------------------";
     cout << "\nN° de alumnos: " << Alumnos.size();
     cout << "\nN° de alumnos aprobados: " << aprobados();
     cout << "\nN° de alumnos desaprobados: " << desaprobados();
-    cout << "\nPromedio de alumnos aprobados: " << aprobados_promedio() << '%';
+    cout << "\n\nPromedio de alumnos aprobados: " << aprobados_promedio() << '%';
     cout << "\nNota media: " << estadistic_media();
     cout << "\nNota común: " << estadistic_moda();
     cout << "\nNota mediana: " << estadistic_mediana();
-    cout << "\nDesviacion de la nota media: " << estadistic_desviacion_media();
+    cout << "\n\nDesviacion de la nota media: " << estadistic_desviacion_media();
     cout << "\nVarianza de la nota: " << estadistic_varianza();
     cout << "\nDesviacion estándar de la nota: " << estadistic_desviacion_std();
 }

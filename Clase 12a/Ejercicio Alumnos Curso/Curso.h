@@ -23,6 +23,7 @@ public:
 
     void add_alumno(Alumno *alumno);
     void delete_alumno(string _codigo);
+    void notas_finales();
     int aprobados();
     int desaprobados();
 

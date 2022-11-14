@@ -42,3 +42,8 @@ void A_Posgrado::aprobado()
 {
     status = (NF >= 11.0);
 }
+
+string A_Posgrado::get_grado()
+{
+    return "Posgrado";
+}

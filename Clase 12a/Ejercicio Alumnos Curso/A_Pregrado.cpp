@@ -42,3 +42,8 @@ void A_Pregrado::aprobado()
 {
     status = (NF >= 13.0);
 }
+
+string A_Pregrado::get_grado()
+{
+    return "Pregrado";
+}

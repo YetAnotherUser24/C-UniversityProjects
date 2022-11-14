@@ -10,31 +10,25 @@ int main()
     auto Yoshua = new A_Pregrado("Yoshua", "202278812", 20, 16, 12, 14);
     auto Ashly = new A_Pregrado("Ashly", "202110911", 20, 18, 20, 20);
     auto Jefferson = new A_Posgrado("Jefferson", "202210275", "Lambayeque", 0, 8, 20);
-    auto Jean = new A_Posgrado("Jean", "");
-
-    Samir->nota_final();
-    Yoshua->nota_final();
-    Ashly->nota_final();
-    Jefferson->nota_final();
-    Jean->nota_final();
-
-    Samir->aprobado();
-    Yoshua->aprobado();
-    Ashly->aprobado();
-    Jefferson->aprobado();
-    Jean->nota_final();
-
-    cout << Samir->get_nota_final() << endl;
-    cout << Yoshua->get_nota_final() << endl;
-    cout << Ashly->get_nota_final() << endl;
-    cout << Jefferson->get_nota_final() << endl;
-    cout << Jean->get_nota_final() << endl;
+    auto Jean = new A_Posgrado("Jean", "201822783", "Lima", 7, 20, 18);
+    auto Carlos = new A_Posgrado("Carlos", "201620617", "Callao", 18, 10, 13);
+    auto Darcie = new A_Pregrado("Darcie", "202218945", 2, 6, 13, 14);
+    auto Mauricio = new A_Pregrado("Mauricio", "202212346", 10, 10, 12, 8);
+    auto Pierre = new A_Posgrado("Pierre", "201756881", "Lima", 16, 6, 10);
+    auto Miguel = new A_Posgrado("Miguel", "201912367", "Barranco", 12, 15, 18);
 
     Progra->add_alumno(Samir);
     Progra->add_alumno(Yoshua);
     Progra->add_alumno(Ashly);
     Progra->add_alumno(Jean);
     Progra->add_alumno(Jefferson);
+    Progra->add_alumno(Carlos);
+    Progra->add_alumno(Darcie);
+    Progra->add_alumno(Mauricio);
+    Progra->add_alumno(Pierre);
+    Progra->add_alumno(Miguel);
+
+    Progra->notas_finales();
 
     Progra->print_estadistics();
     return 0;
